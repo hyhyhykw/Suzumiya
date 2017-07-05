@@ -90,7 +90,7 @@ public class BitmapDataSourceImpl implements BitmapDataSource {
                     Logger.d("HTTP cache initialized");
                 } catch (IOException e) {
                     mHttpDiskCache = null;
-                    Logger.v(e);
+                    Logger.INSTANCE.v(e);
                 }
             }
             mHttpDiskCacheStarting = false;
@@ -152,7 +152,7 @@ public class BitmapDataSourceImpl implements BitmapDataSource {
                         try {
                             fileInputStream.close();
                         } catch (IOException e) {
-                            Logger.e("Error", e);
+                            Logger.INSTANCE.e("Error", e);
                         }
                     }
                 }

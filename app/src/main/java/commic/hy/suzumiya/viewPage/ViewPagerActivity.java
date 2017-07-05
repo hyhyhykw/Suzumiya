@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import commic.hy.suzumiya.R;
+import commic.hy.suzumiya.config.ConfigTools;
 
 /**
  * ViewPager 引导
@@ -32,6 +33,7 @@ public class ViewPagerActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_viewpager);
 		initView();
+
 	}
 
 	private void initView() {

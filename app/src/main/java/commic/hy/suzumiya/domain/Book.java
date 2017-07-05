@@ -1,4 +1,4 @@
-﻿package commic.hy.suzumiya.domain;
+package commic.hy.suzumiya.domain;
 
 import java.text.DecimalFormat;
 import java.util.Date;

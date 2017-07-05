@@ -150,7 +150,7 @@ public class ImageCache {
                             Logger.d("Disk cache initialized");
                         } catch (final IOException e) {
                             mCacheParams.diskCacheDir = null;
-                            Logger.e("initDiskCache - ", e);
+                            Logger.INSTANCE.e("initDiskCache - ", e);
                         }
                     }
                 }
@@ -192,9 +192,9 @@ public class ImageCache {
                         snapshot.getInputStream(DISK_CACHE_INDEX).close();
                     }
                 } catch (final IOException e) {
-                    Logger.e("addBitmapToCache - ", e);
+                    Logger.INSTANCE.e("addBitmapToCache - ", e);
                 } catch (Exception e) {
-                    Logger.e("addBitmapToCache - ", e);
+                    Logger.INSTANCE.e("addBitmapToCache - ", e);
                 } finally {
                     try {
                         if (out != null) {
@@ -243,7 +243,7 @@ public class ImageCache {
                         }
                     }
                 } catch (final IOException e) {
-                    Logger.e("getBitmapFromDiskCache - ", e);
+                    Logger.INSTANCE.e("getBitmapFromDiskCache - ", e);
                 } finally {
                     try {
                         if (inputStream != null) {
@@ -410,7 +410,7 @@ public class ImageCache {
                     mDiskLruCache.delete();
                     Logger.d("Disk cache cleared");
                 } catch (IOException e) {
-                    Logger.e("clearCache - ", e);
+                    Logger.INSTANCE.e("clearCache - ", e);
                 }
                 mDiskLruCache = null;
                 initDiskCache();
@@ -429,7 +429,7 @@ public class ImageCache {
                     mDiskLruCache.flush();
                     Logger.d("Disk cache flushed");
                 } catch (IOException e) {
-                    Logger.e("flush - ", e);
+                    Logger.INSTANCE.e("flush - ", e);
                 }
             }
         }
@@ -449,7 +449,7 @@ public class ImageCache {
                         Logger.d("Disk cache closed");
                     }
                 } catch (IOException e) {
-                    Logger.e("close - ", e);
+                    Logger.INSTANCE.e("close - ", e);
                 }
             }
         }

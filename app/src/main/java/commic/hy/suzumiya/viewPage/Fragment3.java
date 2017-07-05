@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import cn.itcast.book.ui.R;
+
+import commic.hy.suzumiya.R;
 
 public class Fragment3 extends Fragment {
 
