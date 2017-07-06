@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import butterknife.ButterKnife
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created time : 2017/7/5 15:15.
@@ -103,7 +103,7 @@ abstract class BaseListAdapter<T, out V : BaseListAdapter.BaseViewHolder> : Base
     }
 
     protected fun to(clazz: Class<out Activity>, bundle: Bundle?, uri: Uri?) {
-        var intent: Intent = Intent(mContext, clazz)
+        val intent: Intent = Intent(mContext, clazz)
         if (null != bundle)
             intent.putExtra("bundle", bundle)
         if (null != uri)
